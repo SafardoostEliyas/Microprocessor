@@ -30,14 +30,11 @@ delay(3000);
 digitalWrite(led,LOW);
 delay(3000);
 }
+```
+
 ## طرز کار
 با آپلود کردن برنامه می‌توان روشن و خاموش شدن لامپ را بصورت متناوب مشاهده کرد.
 
-## تصاویر
-![تصویر مدار]![pick](httpsgithub.comuser-attachmentsassets025f8c2d-b4fa-4cd5-bf7d-7a031ebbd0da)
-
-
-![images](httpsgithub.comuser-attachmentsassets15213bd1-2b2e-42bf-beb9-d76b6cda25ad)
 
 ## نتیجه‌ پروژه
 در این پروژه نشان‌ میدهیم که چگونه یک LED بطور متناوب روشن و خاموش میشود.
