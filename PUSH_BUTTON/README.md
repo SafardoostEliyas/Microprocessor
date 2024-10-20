@@ -9,6 +9,7 @@
 - لامپ LED
 - کلید فشاری چهار پایه (Pushbutton)
 - سیم‌های رابط
+- مقاومت 220 اهم
 
  ![push](https://github.com/user-attachments/assets/0949230e-33c3-492a-9cac-c7ac6c83e36a)
 
