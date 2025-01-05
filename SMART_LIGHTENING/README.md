@@ -21,36 +21,28 @@
 
 ## کد پروژه:
 ```cpp
-#include <SevSeg.h>
-SevSeg sevseg;
- 
-void setup()
-{
-      //Set to 1 for single digit display
-      byte numDigits = 1;
-   
-      //defines common pins while using multi-digit display. Left empty as we have a single digit display
-      byte digitPins[] = {};
-   
-      //Defines arduino pin connections in order: A, B, C, D, E, F, G, DP
-      byte segmentPins[] = {3, 2, 8, 7, 6, 4, 5, 9};
-      bool resistorsOnSegments = true;
-   
-      //Initialize sevseg object. Uncomment second line if you use common cathode 7 segment
-      sevseg.begin(COMMON_ANODE, numDigits, digitPins, segmentPins, resistorsOnSegments);
-      //sevseg.begin(COMMON_CATHODE, numDigits, digitPins, segmentPins, resistorsOnSegments);
-   
-      sevseg.setBrightness(90);
+const int ldrPin = A0; // پین فوتوسل
+const int ledPin = 9;  // پین LED
+int ldrValue = 0;      // متغیر برای ذخیره مقدار LDR
+
+void setup() {
+  pinMode(ledPin, OUTPUT);    // تنظیم LED به عنوان خروجی
+  Serial.begin(9600);         // شروع ارتباط سریال
 }
- 
-void loop()
-{
-     for (int i = 0; i < 10; i++)
-        {
-         sevseg.setNumber(i);
-         sevseg.refreshDisplay();
-         delay(2000);
-  }
+
+void loop() {
+  // خواندن مقدار آنالوگ فوتوسل
+  ldrValue = analogRead(ldrPin);
+
+  // نمایش مقدار نور در سریال مانیتور
+  Serial.print("Light Intensity: ");
+  Serial.println(ldrValue);
+
+  // تنظیم روشنایی LED بر اساس مقدار فوتوسل
+  int ledBrightness = map(ldrValue, 0, 1023, 0, 255); // تبدیل مقیاس 0-1023 به 0-255
+  analogWrite(ledPin, ledBrightness);
+
+  delay(100); // تاخیر 100 میلی‌ثانیه
 }
 ```
 
