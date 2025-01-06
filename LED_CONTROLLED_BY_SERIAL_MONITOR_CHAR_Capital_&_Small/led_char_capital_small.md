@@ -1,6 +1,4 @@
-# Let's create another README.md file for the updated Arduino project with 'L'/'l' for HIGH and 'H'/'h' for LOW.
 
-readme_content_char = """
 # کنترل LED با حروف کوچک و بزرگ در Serial Monitor
 
 ## شرح مختصر پروژه:
