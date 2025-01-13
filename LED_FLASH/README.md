@@ -11,6 +11,12 @@
 - سیم‌های رابط
 - مقاومت 220 اهم
 
+## تصاویر
+![circuit](https://github.com/user-attachments/assets/7673fc80-a997-4549-a6b7-bf413b3319a5)
+![Led-clignotante-scaled](https://github.com/user-attachments/assets/5a9a7a7e-ffdf-425f-89e1-225280287358)
+
+
+
 ## طریقه انجام آزمایش (اتصالات)
 - پایه منفی LED به مقاومت 220 اهم و سپس به GND همچنین پایه مثبت LED به پین 12 بر روی برد Arduino متصل می‌شود.
 
